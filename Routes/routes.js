@@ -3,7 +3,8 @@ const userController = require('../Controller/UserController')
 
 
 router.post('/register',userController.register)
-router.get('./login',userController.login)
+router.get('/login',userController.login)
+
 
 
 
