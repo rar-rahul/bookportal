@@ -16,6 +16,7 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () =>
   console.log("connected mongoDb")
 );
 
+const cors = require('cors');
 var app = express();
 
 app.set("view engine", "ejs");
@@ -24,6 +25,7 @@ app.use(expressLayouts);
 //global middelware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.use(express.static(path.join(__dirname, "public")));
 

@@ -1,0 +1,77 @@
+<!-- Start Content-->
+<div class="container-fluid">
+                        
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Book</a></li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Category</a></li>
+                        <li class="breadcrumb-item active">Add  Category</li>
+                    </ol>
+                </div>
+               
+            </div>
+        </div>
+    </div>     
+    <!-- end page title --> 
+
+<form action="addBook" method="post" enctype="multipart/form-data">
+    <div class="row">
+       
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Add Book </h5>
+
+                    <div class="mb-3">
+                        <label for="product-name" class="form-label">Title <span class="text-danger">*</span></label>
+                        <input type="text" id="title" name="title" class="form-control" placeholder="e.g : Wings Of Fire">
+                    </div>
+
+                   
+
+                    <div class="mb-3">
+                        <label for="product-category" class="form-label">Categories <span class="text-danger">*</span></label>
+                        <select class="form-control select2" id="product-category" name="category">
+                            <option>Select</option>
+                            <optgroup label="Shopping">
+                                <option value="1">Shopping 1</option>
+                                <option value="2">Shopping 2</option>
+                               
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="product-name" class="form-label">Upload Pdf Book <span class="text-danger">*</span></label>
+                        <input type="file" id="book" name="bookpdf" class="form-control" >
+                    </div>
+
+                  
+                </div>
+            </div> <!-- end card -->
+        </div> <!-- end col -->
+
+      
+    </div>
+    <!-- end row -->
+
+    <div class="row">
+        <div class="col-4">
+            <div class="text-center mb-3">
+                <button type="button" class="btn w-sm btn-light waves-effect">Cancel</button>
+                <button type="submit" name="submit" class="btn w-sm btn-success waves-effect waves-light">Save</button>
+            </div>
+        </div> <!-- end col -->
+    </div>
+    <!-- end row -->
+
+</form>
+    
+</div> <!-- container -->
+
+</div> <!-- content -->
+
