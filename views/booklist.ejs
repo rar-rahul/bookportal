@@ -29,8 +29,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="text-lg-end">
-                                <a href="/view/books" class="btn btn-danger waves-effect waves-light mb-2 me-2"><i class="mdi mdi-basket me-1"></i> Add New Order</a>
-                                <button type="button" class="btn btn-light waves-effect mb-2">Export</button>
+                                <a href="/view/books" class="btn btn-danger waves-effect waves-light mb-2 me-2"><i class="mdi mdi-basket me-1"></i> Add New Book</a>
                             </div>
                         </div><!-- end col-->
                     </div>
@@ -49,13 +48,15 @@
                                     <th>Title</th>
                                     <th>Pdf</th>
                                     <th>Created</th>
-                                    <th>Updated</th>
+                                    
                                   
                                     <th style="width: 125px;">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-
+                                <% data.forEach((booklist)=> { 
+                                    let a = 1;
+                                    %>
                                
                                 <tr>
                                     <td>
@@ -64,26 +65,25 @@
                                             <label class="form-check-label" for="customCheck2">&nbsp;</label>
                                         </div>
                                     </td>
-                                    <td><a href="ecommerce-order-detail.html" class="text-body fw-bold">#UB9708</a> </td>
+                                    <td><a href="ecommerce-order-detail.html" class="text-body fw-bold"> <%= a++ %></a> </td>
                                     <td>
-                                      title
+                                    <%= booklist.title %>
                                     </td>
                                     <td>
-                                        August 05 2018 <small class="text-muted">10:29 PM</small>
+                                        <img src="<%= booklist.title %>" title="" height="60" width="60"/>
+                                         
                                     </td>
+                                   
                                     <td>
-                                        <h5><span class="badge bg-soft-success text-success"><i class="mdi mdi-bitcoin"></i> Paid</span></h5>
-                                    </td>
-                                    <td>
-                                        August 05 2018
+                                        <%= booklist.updated %>
                                     </td>
                                   
                                     <td>
                                         <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                        <a href="deleteBook/<%= booklist.id %>" class="action-icon"> <i class="mdi mdi-delete"></i></a>
                                     </td>
                                 </tr>
-                               
+                                <% }) %>
                              
                            
                                 

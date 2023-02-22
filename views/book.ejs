@@ -37,9 +37,10 @@
                         <label for="product-category" class="form-label">Categories <span class="text-danger">*</span></label>
                         <select class="form-control select2" id="product-category" name="category">
                             <option>Select</option>
-                            <optgroup label="Shopping">
-                                <option value="1">Shopping 1</option>
-                                <option value="2">Shopping 2</option>
+                            <optgroup label="BookCategory">
+                                <% data.forEach((data)=> { %>
+                                <option value="<%= data.id %>"><%= data.categoryname %></option>
+                                    <% }) %>
                                
                             </optgroup>
                         </select>
