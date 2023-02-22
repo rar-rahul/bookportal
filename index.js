@@ -5,7 +5,8 @@ const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const routes = require("./Routes/routes");
 const homeRoutes = require('./Routes/homeroutes')
-
+const loginRoutes = require('./Routes/loginroutes')
+const toastr = require('express-toastr');
 const path = require("path");
 
 const port = 3000;
@@ -27,9 +28,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+app.use(toastr());
+
 app.use(express.static(path.join(__dirname, "public")));
 
 //Handled Route here
+app.get('/',(req, res)=>{ 
+  res.render('login')
+})
+
+app.use("/login",loginRoutes);
 app.use("/api/mydepo/", routes);
 app.use("/view/", homeRoutes);
 

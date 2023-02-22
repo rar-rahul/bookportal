@@ -1,0 +1,60 @@
+<!-- Start Content-->
+<div class="container-fluid">
+                        
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Blog</a></li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">New Blog</a></li>
+                        <li class="breadcrumb-item active">Add  Blog</li>
+                    </ol>
+                </div>
+             
+            </div>
+        </div>
+    </div>     
+    <!-- end page title --> 
+
+<form action="createblog" method="post">
+    <div class="row">
+       
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Add Blog</h5>
+                    <div class="mb-3">
+                        <label for="product-name" class="form-label">Title <span class="text-danger">*</span></label>
+                        <input type="text" id="title" name="title" class="form-control" placeholder="My blog title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="product-name" class="form-label">Blog Description <span class="text-danger">*</span></label>
+                        <textarea id="editor" name="blog_detail" class="form-control" placeholder="My blog detail" rows="10"></textarea>
+                    </div>
+                </div>
+            </div> <!-- end card -->
+        </div> <!-- end col -->
+
+      
+    </div>
+    <!-- end row -->
+
+    <div class="row">
+        <div class="col-12">
+            <div class="text-center mb-3">
+                <button type="button" class="btn w-sm btn-light waves-effect">Cancel</button>
+                <button type="submit" name="submit" class="btn w-sm btn-success waves-effect waves-light">Save</button>
+            </div>
+        </div> <!-- end col -->
+    </div>
+    <!-- end row -->
+
+
+   
+</form>
+    
+</div> <!-- container -->
+
+</div> <!-- content -->

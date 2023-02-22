@@ -5,6 +5,8 @@ const jwt    = require('jsonwebtoken');
 
 const Users = require("../Models/Users");
 
+
+
 exports.register = async (req, res) => {
   console.log(req.body);
 
@@ -77,3 +79,18 @@ exports.login = async(req,res) => {
 
 };
 //end user login here
+
+
+exports.loginapp = async(req,res) => { 
+
+ console.log(req.body);
+
+ const user = await Users.findOne({email:req.body.email});
+
+ console.log(user);
+  
+ if(!user){
+  console.log("not found")
+ }
+
+}
