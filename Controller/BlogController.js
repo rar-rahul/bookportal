@@ -64,11 +64,6 @@ exports.getSingelBlog = async (req,res) => {
         })
     }
 
-   
-
-
-
-    console.log(singelBlog)
-
+ 
 
 }
