@@ -9,7 +9,7 @@ const loginRoutes = require('./Routes/loginroutes')
 const toastr = require('express-toastr');
 const path = require("path");
 
-const port = 3000;
+const port = 8000;
 
 //connect Mongodb using mongoose
 dotenv.config();
@@ -43,5 +43,5 @@ app.use("/view/", homeRoutes);
 
 
 app.listen(port, () => {
-  console.log(`Example application listening on port ${port}`);
+  console.log(`listening on port ${port}`);
 });
